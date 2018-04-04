@@ -20,7 +20,8 @@
 
 /* [1] Constructors and Destructors */
 
-EmailAddress::EmailAddress(const QString & address, const QString & name)
+EmailAddress::EmailAddress(const QString & address, const QString & name, QObject *parent)
+    : QObject(parent)
 {
     this->address = address;
     this->name = name;

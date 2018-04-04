@@ -35,4 +35,6 @@ add_library(SMTPEmail STATIC
     src/mimecontentformatter.h
     src/smtpexports.h
 )
+target_compile_definitions(SMTPEmail PUBLIC SMTP_BUILD_STATIC)
+target_include_directories(SMTPEmail INTERFACE "${CMAKE_CURRENT_SOURCE_DIR}/src")
 target_link_libraries(SMTPEmail PUBLIC Qt5::Network)

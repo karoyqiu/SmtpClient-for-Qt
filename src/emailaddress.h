@@ -30,8 +30,7 @@ public:
 
     /* [1] Constructors and Destructors */
 
-    EmailAddress();
-    EmailAddress(const QString & address, const QString & name="");
+    explicit EmailAddress(const QString & address, const QString & name=QString(), QObject *parent = nullptr);
 
     ~EmailAddress();
 
